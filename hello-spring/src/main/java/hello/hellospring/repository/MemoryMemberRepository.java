@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository //컨테이너에 등록
+//@Repository //컨테이너에 등록
 public class MemoryMemberRepository implements MemberRepository {
     //option + Enter : 자동으로 메소드 불러옴
     private static Map<Long, Member> store = new HashMap<>();
