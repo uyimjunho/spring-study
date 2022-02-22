@@ -20,9 +20,9 @@ class StatefulServiceTest {
         statefulService.order("userA", 10000);
         statefulService1.order("userB", 20000);
 
-        int price = statefulService.getPrice();
-        System.out.println(price);
-        assertThat(statefulService.getPrice()).isEqualTo(20000);
+//        int price = statefulService.getPrice();
+//        System.out.println(price);
+//        assertThat(statefulService.getPrice()).isEqualTo(20000);
     }
 
     static class TestConfig {
