@@ -26,4 +26,14 @@ public class ConfigSingletonTest {
 
         Assertions.assertThat(memberRepository).isEqualTo(memberRepository1);
     }
+
+    @Test
+    void configDeep() {
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println(bean.getClass());//예상 : class hello.core.AppConfig
+        //실제:class hello.core.AppConfig$$EnhancerBySpringCGLIB$$82499f6e
+
+    }
 }
